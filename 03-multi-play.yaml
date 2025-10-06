@@ -1,4 +1,6 @@
--name: PLAY-01
+# play is nothing but list of tasks executed on the server
+
+-name: PLAY-01 
 hosts: frontend
 tasks:
   -name: PLAY-01 and TASKS-01
