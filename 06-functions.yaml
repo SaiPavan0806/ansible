@@ -9,7 +9,7 @@
       msg: "Hello, {{ name | default('Ramesh')}}"
 
 
-# String to list
-- name: convert string into list
-  ansible.builtin.debug:
+ # String to list
+  - name: convert string into list
+    ansible.builtin.debug:
     msg: "Technologies are: {{ technologies | split(',') }}"
