@@ -9,3 +9,13 @@
     concepts: #dictionary or map, If it starts with "Hyphen" it is list. If not it is "dictionary"
       cloud: AWS
       cm: Ansible
+  tasks:
+  - name: print course name
+    ansible.builtin.debug:
+      msg: |
+        Course name is: {{ course }}
+        Duration is: {{ Duration }} mins
+        Is it live: {{ is_live }}
+        Tools covered: {{ tolls }}
+        Cloud: {{ concepts.cloud }}
+        Configuration Management Tool: {{ concepts.cm }}
