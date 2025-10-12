@@ -5,3 +5,7 @@
   - name: print course info
     ansible.builtin.debug:
       msg: "Course name is: {{ COURSE }}, DURATION: {{ DURATION }}, Trainer: {{ Trainer }}"
+
+      # Passing by Arguments 
+      
+      # $ ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "COURSE=DevOps with AWS" -e DURATION=10HRS" -e TRAINER=SivaKumar Reddy" 10-vars-arguments.yaml
