@@ -1,13 +1,29 @@
-- name: install packages
+# - name: install packages
+#   hosts: local
+#   connection: local
+#   become: yes
+#   tasks:
+#     - name: install multiple packages
+#       ansible.builtin.package:
+#         name: "{{ item }}"
+#         state: present
+#       loop:
+#         - nginx
+#         - mysql
+#         - zip
+
+# To install and uninstall packages using loop below is the module
+
+- name: uninstall packages
   hosts: local
   connection: local
   become: yes
   tasks:
-    - name: install multiple packages
+    - name: uninstall multiple packages
       ansible.builtin.package:
-        name: "{{ item }}"
-        state: present
+      name: "{{ item.name }}"
+      state: "{{item.state }}"
       loop:
-        - nginx
-        - mysql
-        - zip
+        - { name: "nginx", state: "absent" }
+        - { name: "mysql", state: "latest" }
+        - { name: "zip", state: "absent" }
