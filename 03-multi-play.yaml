@@ -1,5 +1,4 @@
 # play is nothing but list of tasks executed on the server
-
 - name: PLAY-01
   hosts: frontend
   tasks:
