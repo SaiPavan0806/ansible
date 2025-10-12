@@ -1,6 +1,5 @@
-- name: ping the server
+- name: Ping the server
   hosts: frontend
-  # list of tasks/collections of modules --- IGNORE ---
   tasks:
-    - name: ping
+    - name: ping the server
       ansible.builtin.ping:
