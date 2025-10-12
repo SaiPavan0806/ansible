@@ -1,0 +1,11 @@
+- name: data types
+  hosts: local
+  connection: local
+  vars:
+    course: "DevOps with AWS"   # string
+    Duration: 120 #number
+    is_live: true  #boolean
+    tolls: ["Ansible", "Docker", "Kubernetes", "Terraform"]  #list
+    concepts: #dictionary or map, If it starts with "Hyphen" it is list. If not it is "dictionary"
+      cloud: AWS
+      cm: Ansible
