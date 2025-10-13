@@ -11,4 +11,12 @@
   # string to list
   - name: string to list
     ansible.builtin.debug:
-      msg: "Fruits are: {{ fruits.split(',') }}"
+      msg: "Fruits are: {{ fruits.split(',') }}" 
+
+  - name: redirections
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
+    register: redirect_output
+
+  - name: print the redirected output
+    ansible.builtin.debug:
+      msg: "Fruits are: {{ fruits | regex_replace(',', ' -> ') }}"
