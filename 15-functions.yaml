@@ -8,10 +8,10 @@
     ansible.builtin.debug:
      msg: "Hello, {{ name | default('Pavan') }}"
 
-  # # string to list
-  # - name: string to list
-  #   ansible.builtin.debug:
-  #     msg: "Fruits are: {{ fruits.split(',') }}" 
+  # string to list
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "Fruits are: {{ fruits.split(',') }}" 
 
   - name: redirections
     ansible.builtin.command: ls -ltr > /tmp/output.txt
